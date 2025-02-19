@@ -1,7 +1,9 @@
-FROM python:3.13
+FROM python:3.12
 
 WORKDIR /app
 
-RUN pip install -r requirements.txt
+COPY . .
 
-# CMD ['python', '']
+RUN /bin/bash setup.sh
+
+ENTRYPOINT ["/bin/bash", "run.sh"]
