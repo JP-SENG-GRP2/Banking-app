@@ -6,4 +6,6 @@ COPY . .
 
 RUN /bin/bash setup.sh
 
+EXPOSE 8000
+
 ENTRYPOINT ["/bin/bash", "run.sh"]
